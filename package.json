@@ -2,13 +2,16 @@
   "name": "calorie-cruncher",
   "version": "1.0.0",
   "description": "A calorie-tracking app written for CS3141 - Team Software Project",
-  "main": "app.js",
+  "main": "dist/app.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "wait-on": "^6.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "tsc && node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/MarkDWashington/calorie-cruncher/issues"
   },
-  "homepage": "https://github.com/MarkDWashington/calorie-cruncher#readme"
+  "homepage": "https://github.com/MarkDWashington/calorie-cruncher#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }

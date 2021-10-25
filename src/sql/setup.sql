@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS USER (
+CREATE TABLE User (
     email varchar(100) NOT NULL,
     pass varchar(100) NOT NULL,
-    PRIMARY KET (email)
+    PRIMARY KEY (email)
 );
 
-INSERT INTO User values("nmanor@mtu.edu", "password");
+INSERT INTO User VALUES('nmanor@mtu.edu', 'password');

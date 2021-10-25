@@ -3,7 +3,7 @@ import express from "express";
 import loginGetRoutes from "./routes/loginGetRoutes";
 
 const server = express();
-const port: number = 300;
+const port: number = 3000;
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
