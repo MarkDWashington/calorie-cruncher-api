@@ -7,3 +7,4 @@ CREATE TABLE User (
 );
 
 INSERT INTO User VALUES('nmanor@mtu.edu', 'password', 'Nolan', 'Manor');
+select * from User;
