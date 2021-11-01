@@ -5,7 +5,7 @@ services:
         image: node:16-alpine
         command: sh -c "npm install && npx wait-on tcp:mysql:3306 && npm run start"
         ports:
-            - 3000:3000
+            - 3001:3000
         working_dir: /app
         volumes:
             - ./:/app
@@ -24,7 +24,7 @@ services:
             MYSQL_ROOT_PASSWORD: secret
             MYSQL_DATABASE: calories
         ports:
-            - 3306:3306
+            - 3307:3307
         
 volumes:
   munchy-sql-data:
