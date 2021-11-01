@@ -33,7 +33,7 @@ loginGetRoutes.post('/calories',(req, res) =>{
   const lname = req.body.lname
  
   connection.query(
-    "INSERT INTO User(email, pass, fname, lname) VALUES (?,?,?,?)",
+    "INSERT INTO User(email, pass, fname, lname) VALUES (?,PASSWORD(?),?,?)",
     [email, password, fname, lname],
     (err,result) =>{console.log(err);
     });
