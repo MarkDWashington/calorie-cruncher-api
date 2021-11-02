@@ -5,7 +5,9 @@ import ILoginResponse from "../models/ILoginResponse";
 
 const loginGetRoutes = Express.Router();
 
-
+//Resolve the cors error without browser extension
+const cors = require("cors");
+loginGetRoutes.use(cors());
 
 
 // Get a list of all users
