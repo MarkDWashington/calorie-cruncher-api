@@ -25,6 +25,30 @@ loginGetRoutes.get("/calories", (req, res) => {
   connection.end();
 });
 
+/*
+//Let a user login - IE confirm password and email on login screen. 
+loginGetRoutes.post('/login', (req, res) =>{
+  var connect: mysql.Connection = getDBConnection();  
+  const email = req.body.email;
+  const password = req.body.password;
+
+  connect.query(
+    "Select * from User where email = ? and password = ?",
+    [email, password],
+    (err, result) =>{
+      if(err){
+      res.send({err: err})
+      }
+      if(result.toString.length > 0){
+        res.send(result);
+      }else{
+        res.send({message: "Wrong username/password"});
+      }
+      
+    });
+});
+*/
+
 //Post info to db from the server\
 //This is what I added to post info to the database. 
 loginGetRoutes.post('/calories',(req, res) =>{
