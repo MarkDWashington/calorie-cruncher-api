@@ -1,8 +1,9 @@
 version: "3.8"
 
 services:
-    app:
-        image: node:16-alpine
+    api:
+        #image: node:16-alpine
+        image: api:latest
         command: sh -c "npm install && npx wait-on tcp:mysql:3306 && npm run start"
         ports:
             - 3001:3000
@@ -15,6 +16,17 @@ services:
             MYSQL_PASSWORD: secret
             MYSQL_DB: calories
     
+    ui: 
+        image: ui:latest
+        #image: node:16-alpine
+        command: sh -c "npm install && npm start --port 8000"
+        ports:
+            - 8000:8000
+        working_dir: /app
+        volumes:
+            - ./:/app
+
+
     mysql:
         image: mysql:latest
         volumes:
