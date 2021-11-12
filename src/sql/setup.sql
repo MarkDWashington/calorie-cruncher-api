@@ -6,5 +6,17 @@ CREATE TABLE User (
     PRIMARY KEY (email)
 );
 
-INSERT INTO User VALUES('nmanor@mtu.edu', 'password', 'Nolan', 'Manor');
-select * from User;
+CREATE TABLE Goal (
+    email varchar(100) NOT NULL,
+    curWeight int NOT NULL,
+    goalWeight int NOT NULL,
+    calGoal int NOT NULL,
+    PRIMARY KEY (email)
+);
+
+CREATE TABLE Meal (
+    email varchar(100) NOT NULL,
+    food varchar(100) NOT NULL,
+    calories int NOT NULL,
+    PRIMARY KEY (email, food)
+);
